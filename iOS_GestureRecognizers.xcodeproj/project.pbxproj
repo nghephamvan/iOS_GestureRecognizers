@@ -13,6 +13,7 @@
 		84C7233B1EEA4AAD00BD8821 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C723391EEA4AAD00BD8821 /* Main.storyboard */; };
 		84C7233D1EEA4AAD00BD8821 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C7233C1EEA4AAD00BD8821 /* Assets.xcassets */; };
 		84C723401EEA4AAD00BD8821 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C7233E1EEA4AAD00BD8821 /* LaunchScreen.storyboard */; };
+		84C7234A1EEA89FA00BD8821 /* Totoro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84C723491EEA89FA00BD8821 /* Totoro.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		84C7233C1EEA4AAD00BD8821 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84C7233F1EEA4AAD00BD8821 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84C723411EEA4AAD00BD8821 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84C723491EEA89FA00BD8821 /* Totoro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Totoro.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		84C7232F1EEA4AAC00BD8821 /* iOS_GestureRecognizers */ = {
 			isa = PBXGroup;
 			children = (
+				84C723491EEA89FA00BD8821 /* Totoro.jpg */,
 				84C723331EEA4AAC00BD8821 /* AppDelegate.h */,
 				84C723341EEA4AAC00BD8821 /* AppDelegate.m */,
 				84C723361EEA4AAC00BD8821 /* ViewController.h */,
@@ -136,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C7234A1EEA89FA00BD8821 /* Totoro.jpg in Resources */,
 				84C723401EEA4AAD00BD8821 /* LaunchScreen.storyboard in Resources */,
 				84C7233D1EEA4AAD00BD8821 /* Assets.xcassets in Resources */,
 				84C7233B1EEA4AAD00BD8821 /* Main.storyboard in Resources */,
@@ -300,6 +304,7 @@
 				84C723461EEA4AAD00BD8821 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

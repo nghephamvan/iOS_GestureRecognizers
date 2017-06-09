@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-
+- (IBAction)tapImageAction:(id)sender;
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapImage;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 

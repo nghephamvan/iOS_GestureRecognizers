@@ -13,9 +13,12 @@
 @end
 
 @implementation ViewController
+@synthesize imageView, tapImage;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    imageView.userInteractionEnabled = YES;
+    [imageView addGestureRecognizer:tapImage];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -24,4 +27,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)tapImageAction:(id)sender {
+    NSLog(@"Tap image successful");
+}
 @end

@@ -14,13 +14,49 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Totoro.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aKs-dW-nXt">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <gestureRecognizers/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="30" y="163" width="260" height="153"/>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="A7X-BH-VzE" appends="YES" id="XAX-hX-wle"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="aKs-dW-nXt"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="aKs-dW-nXt"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="aKs-dW-nXt" id="UJc-4f-fls"/>
+                        <outlet property="tapImage" destination="A7X-BH-VzE" id="pAO-Ej-E01"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="A7X-BH-VzE">
+                    <connections>
+                        <action selector="tapImageAction:" destination="BYZ-38-t0r" id="TMJ-d3-QEg"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="210" y="137"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Totoro.jpg" width="1920" height="1080"/>
+    </resources>
 </document>
