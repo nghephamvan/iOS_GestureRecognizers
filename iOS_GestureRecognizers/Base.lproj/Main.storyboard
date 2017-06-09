@@ -25,6 +25,8 @@
                                 </variation>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="A7X-BH-VzE" appends="YES" id="XAX-hX-wle"/>
+                                    <outletCollection property="gestureRecognizers" destination="DRx-oc-AEO" appends="YES" id="L7j-K6-TRs"/>
+                                    <outletCollection property="gestureRecognizers" destination="76N-1I-Oj8" appends="YES" id="zK4-SA-bW6"/>
                                 </connections>
                             </imageView>
                         </subviews>
@@ -43,6 +45,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="imageView" destination="aKs-dW-nXt" id="UJc-4f-fls"/>
+                        <outlet property="pinchImage" destination="DRx-oc-AEO" id="9b9-hi-1FJ"/>
+                        <outlet property="rotateImage" destination="76N-1I-Oj8" id="Phm-lZ-u0r"/>
                         <outlet property="tapImage" destination="A7X-BH-VzE" id="pAO-Ej-E01"/>
                     </connections>
                 </viewController>
@@ -52,6 +56,16 @@
                         <action selector="tapImageAction:" destination="BYZ-38-t0r" id="TMJ-d3-QEg"/>
                     </connections>
                 </tapGestureRecognizer>
+                <pinchGestureRecognizer id="DRx-oc-AEO">
+                    <connections>
+                        <action selector="pinchImageAction:" destination="BYZ-38-t0r" id="C7f-np-Haa"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="76N-1I-Oj8">
+                    <connections>
+                        <action selector="rotateImageAction:" destination="BYZ-38-t0r" id="Afb-2l-R30"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="210" y="137"/>
         </scene>

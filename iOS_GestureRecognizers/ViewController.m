@@ -13,12 +13,19 @@
 @end
 
 @implementation ViewController
-@synthesize imageView, tapImage;
+@synthesize imageView, tapImage, pinchImage, rotateImage;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     imageView.userInteractionEnabled = YES;
+    
+    tapImage = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImageAction:)];
+    pinchImage = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchImageAction:)];
+    rotateImage = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(rotateImageAction:)];
+    
+    [imageView addGestureRecognizer:pinchImage];
     [imageView addGestureRecognizer:tapImage];
+    [imageView addGestureRecognizer:rotateImage];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -28,6 +35,13 @@
 }
 
 - (IBAction)tapImageAction:(id)sender {
-    NSLog(@"Tap image successful");
+    NSLog(@"Tap image");
+}
+- (IBAction)pinchImageAction:(id)sender {
+    NSLog(@"pinch image");
+}
+
+- (IBAction)rotateImageAction:(id)sender {
+    NSLog(@"rotate Image");
 }
 @end
