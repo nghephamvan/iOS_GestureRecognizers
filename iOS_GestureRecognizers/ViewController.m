@@ -13,7 +13,7 @@
 @end
 
 @implementation ViewController
-@synthesize imageView, tapImage, pinchImage, rotateImage;
+@synthesize imageView, tapImage, pinchImage, rotateImage, longPressImage, swipeRightImage;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,8 +42,12 @@
     NSLog(@"long press image");
 }
 
-- (IBAction)panAction:(id)sender {
-    NSLog(@"pan image");
+- (IBAction)swipeRightAction:(id)sender {
+    NSLog(@"swipe right image");
+}
+
+- (IBAction)swipeLeftAction:(id)sender {
+    NSLog(@"swipe left image");
 }
 
 - (IBAction)pinchImageAction:(id)sender {
@@ -53,4 +57,5 @@
 - (IBAction)rotateImageAction:(id)sender {
     NSLog(@"rotate Image");
 }
+
 @end
