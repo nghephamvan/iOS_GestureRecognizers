@@ -19,13 +19,13 @@
     [super viewDidLoad];
     imageView.userInteractionEnabled = YES;
     
-    tapImage = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImageAction:)];
-    pinchImage = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchImageAction:)];
-    rotateImage = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(rotateImageAction:)];
-    
-    [imageView addGestureRecognizer:pinchImage];
-    [imageView addGestureRecognizer:tapImage];
-    [imageView addGestureRecognizer:rotateImage];
+//    tapImage = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImageAction:)];
+//    pinchImage = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchImageAction:)];
+//    rotateImage = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(rotateImageAction:)];
+//    
+//    [imageView addGestureRecognizer:pinchImage];
+//    [imageView addGestureRecognizer:tapImage];
+//    [imageView addGestureRecognizer:rotateImage];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -40,6 +40,10 @@
 
 - (IBAction)longPressImageAction:(id)sender {
     NSLog(@"long press image");
+}
+
+- (IBAction)panAction:(id)sender {
+    NSLog(@"pan image");
 }
 
 - (IBAction)pinchImageAction:(id)sender {

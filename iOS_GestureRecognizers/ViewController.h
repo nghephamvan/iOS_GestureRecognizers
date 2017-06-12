@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UIPanGestureRecognizer *panImage;
 @property (strong, nonatomic) IBOutlet UILongPressGestureRecognizer *longPressImage;
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapImage;
 @property (strong, nonatomic) IBOutlet UIPinchGestureRecognizer *pinchImage;
@@ -18,5 +19,6 @@
 - (IBAction)rotateImageAction:(id)sender;
 - (IBAction)tapImageAction:(id)sender;
 - (IBAction)longPressImageAction:(id)sender;
+- (IBAction)panAction:(id)sender;
 @end
 

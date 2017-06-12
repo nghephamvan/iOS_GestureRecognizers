@@ -21,13 +21,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <gestureRecognizers/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="30" y="163" width="260" height="153"/>
+                                    <rect key="frame" x="22" y="153" width="277" height="173"/>
                                 </variation>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="A7X-BH-VzE" appends="YES" id="XAX-hX-wle"/>
                                     <outletCollection property="gestureRecognizers" destination="DRx-oc-AEO" appends="YES" id="L7j-K6-TRs"/>
                                     <outletCollection property="gestureRecognizers" destination="76N-1I-Oj8" appends="YES" id="zK4-SA-bW6"/>
                                     <outletCollection property="gestureRecognizers" destination="Cqo-tV-Q9p" appends="YES" id="gam-hl-d76"/>
+                                    <outletCollection property="gestureRecognizers" destination="qrT-mE-2Gn" appends="YES" id="Nd0-wD-3dW"/>
                                 </connections>
                             </imageView>
                         </subviews>
@@ -47,6 +48,7 @@
                     <connections>
                         <outlet property="imageView" destination="aKs-dW-nXt" id="UJc-4f-fls"/>
                         <outlet property="longPressImage" destination="Cqo-tV-Q9p" id="q4v-xs-Mzj"/>
+                        <outlet property="panImage" destination="qrT-mE-2Gn" id="uST-EU-3I2"/>
                         <outlet property="pinchImage" destination="DRx-oc-AEO" id="9b9-hi-1FJ"/>
                         <outlet property="rotateImage" destination="76N-1I-Oj8" id="Phm-lZ-u0r"/>
                         <outlet property="tapImage" destination="A7X-BH-VzE" id="pAO-Ej-E01"/>
@@ -73,6 +75,11 @@
                         <action selector="longPressImageAction:" destination="BYZ-38-t0r" id="vc5-pZ-stH"/>
                     </connections>
                 </pongPressGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="qrT-mE-2Gn">
+                    <connections>
+                        <action selector="panAction:" destination="BYZ-38-t0r" id="Yit-k1-3RJ"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="210" y="137"/>
         </scene>
