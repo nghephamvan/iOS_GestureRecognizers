@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-- (IBAction)tapImageAction:(id)sender;
+@property (strong, nonatomic) IBOutlet UILongPressGestureRecognizer *longPressImage;
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapImage;
 @property (strong, nonatomic) IBOutlet UIPinchGestureRecognizer *pinchImage;
 @property (strong, nonatomic) IBOutlet UIRotationGestureRecognizer *rotateImage;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 - (IBAction)pinchImageAction:(id)sender;
 - (IBAction)rotateImageAction:(id)sender;
+- (IBAction)tapImageAction:(id)sender;
+- (IBAction)longPressImageAction:(id)sender;
 @end
 

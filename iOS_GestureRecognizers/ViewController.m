@@ -37,6 +37,11 @@
 - (IBAction)tapImageAction:(id)sender {
     NSLog(@"Tap image");
 }
+
+- (IBAction)longPressImageAction:(id)sender {
+    NSLog(@"long press image");
+}
+
 - (IBAction)pinchImageAction:(id)sender {
     NSLog(@"pinch image");
 }
