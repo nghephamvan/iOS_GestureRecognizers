@@ -21,15 +21,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <gestureRecognizers/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="140" width="320" height="199"/>
+                                    <rect key="frame" x="0.0" y="142" width="320" height="196"/>
                                 </variation>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="A7X-BH-VzE" appends="YES" id="XAX-hX-wle"/>
                                     <outletCollection property="gestureRecognizers" destination="DRx-oc-AEO" appends="YES" id="L7j-K6-TRs"/>
                                     <outletCollection property="gestureRecognizers" destination="76N-1I-Oj8" appends="YES" id="zK4-SA-bW6"/>
                                     <outletCollection property="gestureRecognizers" destination="Cqo-tV-Q9p" appends="YES" id="gam-hl-d76"/>
-                                    <outletCollection property="gestureRecognizers" destination="2Rx-mg-NBg" appends="YES" id="FTJ-5U-Ny5"/>
-                                    <outletCollection property="gestureRecognizers" destination="I9T-bm-7FM" appends="YES" id="O3C-6h-4Dl"/>
                                 </connections>
                             </imageView>
                         </subviews>
@@ -51,8 +49,6 @@
                         <outlet property="longPressImage" destination="Cqo-tV-Q9p" id="q4v-xs-Mzj"/>
                         <outlet property="pinchImage" destination="DRx-oc-AEO" id="9b9-hi-1FJ"/>
                         <outlet property="rotateImage" destination="76N-1I-Oj8" id="Phm-lZ-u0r"/>
-                        <outlet property="swipeLeftImage" destination="I9T-bm-7FM" id="j3N-D5-Bpx"/>
-                        <outlet property="swipeRightImage" destination="2Rx-mg-NBg" id="r0I-WK-9QZ"/>
                         <outlet property="tapImage" destination="A7X-BH-VzE" id="pAO-Ej-E01"/>
                     </connections>
                 </viewController>
@@ -77,16 +73,6 @@
                         <action selector="longPressImageAction:" destination="BYZ-38-t0r" id="vc5-pZ-stH"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="2Rx-mg-NBg">
-                    <connections>
-                        <action selector="swipeRightAction:" destination="BYZ-38-t0r" id="M9D-8e-jBK"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="I9T-bm-7FM" userLabel="Swipe Left Image">
-                    <connections>
-                        <action selector="swipeLeftAction:" destination="BYZ-38-t0r" id="DyW-jp-DeO"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="210" y="137"/>
         </scene>

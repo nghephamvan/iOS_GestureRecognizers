@@ -13,12 +13,23 @@
 @end
 
 @implementation ViewController
-@synthesize imageView, tapImage, pinchImage, rotateImage, longPressImage, swipeRightImage;
+@synthesize imageView, tapImage, pinchImage, rotateImage, longPressImage, images, imageIndex;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    imageIndex = 0;
     imageView.userInteractionEnabled = YES;
+    images = [[NSMutableArray alloc] initWithObjects:@"girl.jpg", @"bush.jpg", @"Totoro.jpg", nil];
+    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
     
+    // Setting the swipe direction.
+    [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
+    
+    // Adding the swipe gesture on image view
+    [imageView addGestureRecognizer:swipeLeft];
+    [imageView addGestureRecognizer:swipeRight];
 //    tapImage = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImageAction:)];
 //    pinchImage = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchImageAction:)];
 //    rotateImage = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(rotateImageAction:)];
@@ -42,12 +53,20 @@
     NSLog(@"long press image");
 }
 
-- (IBAction)swipeRightAction:(id)sender {
-    NSLog(@"swipe right image");
-}
-
-- (IBAction)swipeLeftAction:(id)sender {
-    NSLog(@"swipe left image");
+- (void)handleSwipe:(UISwipeGestureRecognizer *)swipe {
+    if ([images count] > 0) {
+        if (swipe.direction == UISwipeGestureRecognizerDirectionLeft) {
+            imageIndex--;
+        }
+        
+        if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
+            imageIndex++;
+        }
+    }
+    
+    imageIndex = (imageIndex < 0) ? ((int)[images count]-1): (imageIndex % [images count]);
+    imageView.image =   [UIImage imageNamed:[images objectAtIndex:imageIndex]];
+    
 }
 
 - (IBAction)pinchImageAction:(id)sender {

@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeLeftImage;
-@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeRightImage;
+@property (strong, nonatomic) NSMutableArray *images;
+@property int imageIndex;
+//@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeImage;
 @property (strong, nonatomic) IBOutlet UILongPressGestureRecognizer *longPressImage;
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapImage;
 @property (strong, nonatomic) IBOutlet UIPinchGestureRecognizer *pinchImage;
@@ -20,7 +21,6 @@
 - (IBAction)rotateImageAction:(id)sender;
 - (IBAction)tapImageAction:(id)sender;
 - (IBAction)longPressImageAction:(id)sender;
-- (IBAction)swipeRightAction:(id)sender;
-- (IBAction)swipeLeftAction:(id)sender;
+//- (IBAction)swipeAction:(UISwipeGestureRecognizer *)sender;
 @end
 
