@@ -28,6 +28,8 @@
                                     <outletCollection property="gestureRecognizers" destination="DRx-oc-AEO" appends="YES" id="L7j-K6-TRs"/>
                                     <outletCollection property="gestureRecognizers" destination="76N-1I-Oj8" appends="YES" id="zK4-SA-bW6"/>
                                     <outletCollection property="gestureRecognizers" destination="Cqo-tV-Q9p" appends="YES" id="gam-hl-d76"/>
+                                    <outletCollection property="gestureRecognizers" destination="2eu-ss-SMZ" appends="YES" id="IOp-fh-OXo"/>
+                                    <outletCollection property="gestureRecognizers" destination="xoY-g3-bX3" appends="YES" id="WFZ-RR-rlk"/>
                                 </connections>
                             </imageView>
                         </subviews>
@@ -73,8 +75,10 @@
                         <action selector="longPressImageAction:" destination="BYZ-38-t0r" id="vc5-pZ-stH"/>
                     </connections>
                 </pongPressGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="2eu-ss-SMZ"/>
+                <swipeGestureRecognizer direction="left" id="xoY-g3-bX3"/>
             </objects>
-            <point key="canvasLocation" x="210" y="137"/>
+            <point key="canvasLocation" x="16.5" y="-315"/>
         </scene>
     </scenes>
     <resources>

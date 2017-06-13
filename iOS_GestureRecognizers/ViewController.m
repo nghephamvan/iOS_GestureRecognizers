@@ -65,8 +65,13 @@
     }
     
     imageIndex = (imageIndex < 0) ? ((int)[images count]-1): (imageIndex % [images count]);
-    imageView.image =   [UIImage imageNamed:[images objectAtIndex:imageIndex]];
     
+    [UIView transitionWithView:self.imageView
+                      duration:0.5f
+                       options:(swipe.direction == UISwipeGestureRecognizerDirectionLeft) ? UIViewAnimationOptionTransitionCurlUp : UIViewAnimationOptionTransitionCurlDown
+                    animations:^{
+                        imageView.image = [UIImage imageNamed:[images objectAtIndex:imageIndex]];
+                    } completion:nil];
 }
 
 - (IBAction)pinchImageAction:(id)sender {
