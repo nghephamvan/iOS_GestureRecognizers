@@ -19,7 +19,7 @@
     [super viewDidLoad];
     imageIndex = 0;
     imageView.userInteractionEnabled = YES;
-    images = [[NSMutableArray alloc] initWithObjects:@"girl.jpg", @"bush.jpg", @"Totoro.jpg", nil];
+    images = [[NSMutableArray alloc] initWithObjects: @"Totoro.jpg", @"bush.jpg", @"girl.jpg", nil];
     UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
     UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
     
@@ -56,11 +56,11 @@
 - (void)handleSwipe:(UISwipeGestureRecognizer *)swipe {
     if ([images count] > 0) {
         if (swipe.direction == UISwipeGestureRecognizerDirectionLeft) {
-            imageIndex--;
+            imageIndex++;
         }
         
         if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
-            imageIndex++;
+            imageIndex--;
         }
     }
     

@@ -55,7 +55,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="A7X-BH-VzE">
+                <tapGestureRecognizer numberOfTapsRequired="2" id="A7X-BH-VzE">
                     <connections>
                         <action selector="tapImageAction:" destination="BYZ-38-t0r" id="TMJ-d3-QEg"/>
                     </connections>
