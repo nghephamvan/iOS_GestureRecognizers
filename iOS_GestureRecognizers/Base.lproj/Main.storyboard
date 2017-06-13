@@ -17,68 +17,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Totoro.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aKs-dW-nXt">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="SA4-83-Whz">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <gestureRecognizers/>
+                                <subviews>
+                                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Totoro.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aKs-dW-nXt">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <gestureRecognizers/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="0.0" y="183" width="320" height="181"/>
+                                        </variation>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Cqo-tV-Q9p" appends="YES" id="gam-hl-d76"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="aKs-dW-nXt"/>
+                                    </mask>
+                                </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="142" width="320" height="196"/>
+                                    <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                    <mask key="subviews">
+                                        <include reference="aKs-dW-nXt"/>
+                                    </mask>
                                 </variation>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="A7X-BH-VzE" appends="YES" id="XAX-hX-wle"/>
-                                    <outletCollection property="gestureRecognizers" destination="DRx-oc-AEO" appends="YES" id="L7j-K6-TRs"/>
-                                    <outletCollection property="gestureRecognizers" destination="76N-1I-Oj8" appends="YES" id="zK4-SA-bW6"/>
-                                    <outletCollection property="gestureRecognizers" destination="Cqo-tV-Q9p" appends="YES" id="gam-hl-d76"/>
-                                    <outletCollection property="gestureRecognizers" destination="2eu-ss-SMZ" appends="YES" id="IOp-fh-OXo"/>
-                                    <outletCollection property="gestureRecognizers" destination="xoY-g3-bX3" appends="YES" id="WFZ-RR-rlk"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="opx-nP-zMK"/>
                                 </connections>
-                            </imageView>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="aKs-dW-nXt"/>
+                                <exclude reference="SA4-83-Whz"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="aKs-dW-nXt"/>
+                                <include reference="SA4-83-Whz"/>
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="imageView" destination="aKs-dW-nXt" id="UJc-4f-fls"/>
-                        <outlet property="longPressImage" destination="Cqo-tV-Q9p" id="q4v-xs-Mzj"/>
-                        <outlet property="pinchImage" destination="DRx-oc-AEO" id="9b9-hi-1FJ"/>
-                        <outlet property="rotateImage" destination="76N-1I-Oj8" id="Phm-lZ-u0r"/>
-                        <outlet property="tapImage" destination="A7X-BH-VzE" id="pAO-Ej-E01"/>
+                        <outlet property="longPressImage" destination="Cqo-tV-Q9p" id="h3B-tk-WSt"/>
+                        <outlet property="pinchImage" destination="DRx-oc-AEO" id="yD8-0d-vRw"/>
+                        <outlet property="rotateImage" destination="76N-1I-Oj8" id="lR9-Df-6R7"/>
+                        <outlet property="scrollView" destination="SA4-83-Whz" id="Rsn-6n-c3b"/>
+                        <outlet property="tapImage" destination="A7X-BH-VzE" id="Aiw-5o-OYW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer numberOfTapsRequired="2" id="A7X-BH-VzE">
-                    <connections>
-                        <action selector="tapImageAction:" destination="BYZ-38-t0r" id="TMJ-d3-QEg"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <pinchGestureRecognizer id="DRx-oc-AEO">
-                    <connections>
-                        <action selector="pinchImageAction:" destination="BYZ-38-t0r" id="C7f-np-Haa"/>
-                    </connections>
-                </pinchGestureRecognizer>
-                <rotationGestureRecognizer id="76N-1I-Oj8">
-                    <connections>
-                        <action selector="rotateImageAction:" destination="BYZ-38-t0r" id="Afb-2l-R30"/>
-                    </connections>
-                </rotationGestureRecognizer>
+                <pinchGestureRecognizer id="DRx-oc-AEO"/>
+                <rotationGestureRecognizer id="76N-1I-Oj8"/>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Cqo-tV-Q9p">
                     <connections>
                         <action selector="longPressImageAction:" destination="BYZ-38-t0r" id="vc5-pZ-stH"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="2eu-ss-SMZ"/>
-                <swipeGestureRecognizer direction="left" id="xoY-g3-bX3"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="A7X-BH-VzE"/>
             </objects>
-            <point key="canvasLocation" x="16.5" y="-315"/>
+            <point key="canvasLocation" x="16.5" y="-296"/>
         </scene>
     </scenes>
     <resources>

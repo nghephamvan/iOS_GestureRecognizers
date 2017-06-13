@@ -13,7 +13,7 @@
 @end
 
 @implementation ViewController
-@synthesize imageView, tapImage, pinchImage, rotateImage, longPressImage, images, imageIndex;
+@synthesize imageView, tapImage, pinchImage, rotateImage, longPressImage, images, imageIndex, scrollView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,7 +37,10 @@
 //    [imageView addGestureRecognizer:pinchImage];
 //    [imageView addGestureRecognizer:tapImage];
 //    [imageView addGestureRecognizer:rotateImage];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [scrollView setClipsToBounds:YES];
+    [scrollView setMaximumZoomScale:6.0f];
+    [scrollView setMinimumZoomScale:1.0f];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,7 +69,7 @@
     
     imageIndex = (imageIndex < 0) ? ((int)[images count]-1): (imageIndex % [images count]);
     
-    [UIView transitionWithView:self.imageView
+    [UIView transitionWithView:self.view
                       duration:0.5f
                        options:(swipe.direction == UISwipeGestureRecognizerDirectionLeft) ? UIViewAnimationOptionTransitionCurlUp : UIViewAnimationOptionTransitionCurlDown
                     animations:^{
@@ -80,6 +83,10 @@
 
 - (IBAction)rotateImageAction:(id)sender {
     NSLog(@"rotate Image");
+}
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    return imageView;
 }
 
 @end
